@@ -1,4 +1,4 @@
-# Hadas - an anti-IDE 
+# Hadas - an automated (yet controllable from a pretty UI) server AND client-side recycler
 
 Takes care of your project reloading, once you change your code. Be agile. <br/>
 It recycles both the application server side and any browser windows connected to it, every once your project changes (e.g. when you save or move a file).
@@ -36,10 +36,15 @@ then access the UI by opening the shown address.
 
 This is work in progress. If you run into issues, or wish to have a modification, file an issue on the issues tab.
 
-## Welcome contributions
+## Roadmap
 
-This is a user experience centric tool, any contribution should maintain or improve a cool UI and configurability coolness. <br/>
 Post your ideas in the Wiki or fork / take away pieces.
++ I'd like to rewrite the UI in angular.js
++ Make the console output nicer
++ Move configuration the the UI rather the config file
++ Add button (and respective configuration) for committing all changes and pushing to github on demand.
++ Add button (and respective configuration) for pushing to heroku on demand
++ It would be good to rewrite it all, the code is too much of an ugly hack and tests were abandoned midway
 
 ## Inspiration and acknowledgements
 
