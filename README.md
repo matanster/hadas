@@ -33,7 +33,7 @@ Code change to your project:     1 (for your application's browser side code, if
 ## Usage after setup
 
 Start Hadas by locating to the root directory and running: `node server.js` (or on Windows, run `server.bat`), <br/>
-then access the UI by opening the shown address. 
+then access the UI by opening the shown url in your browser. From there you can control the target application, pause, or resume the automatic recycling.
 
 ## Stability status
 
@@ -44,14 +44,14 @@ This is work in progress. If you run into issues, or wish to have a modification
 Post your ideas in the Wiki or fork / take away pieces.
 + I'd like to rewrite the UI in angular.js
 + Make the console output nicer
-+ Move configuration the the UI rather the config file
++ Move configuration to the UI rather than only having a config file
 + Add button (and respective configuration) for committing all changes and pushing to github on demand.
 + Add button (and respective configuration) for pushing to heroku on demand
 + It would be good to rewrite it all, the code is too much of an ugly hack and tests were abandoned midway
 
 ## Inspiration and acknowledgements
 
-This was inspired by a general disenchantment with how IDE's are designed. <br/>
+This was inspired by a general disenchantment with IDE-centric workflows and an unmet need for quick feedback. <br/>
 I found no existing project doing this, so I made it. Lightly inspired by [Light Table] (http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/). <br/> The code was partly inspired by [Andrew Davey's vogue code] (https://github.com/andrewdavey/vogue). 
 
 Under the hood:
