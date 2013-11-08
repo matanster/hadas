@@ -2,7 +2,7 @@
 
 An automated (yet controllable from a pretty UI) server AND client-side recycler.
 
-Takes care of your project reloading, once you change your code. Be agile. <br/>
+Takes care of your project automagically reloading, once you change your code. Be agile. <br/>
 It recycles both the application server side and any browser windows connected to it, every once your project changes (e.g. when you save or move a file).
 An html user interface governs enabling and disabling this automatic recycling, while also serving its stdout/err all in one place. To round it up you may also recycle your project by the click of a button on the [user interface]
 (https://github.com/cloudaloe/hadas/blob/master/screenshots/hadas5.png). [Some more motivation](http://cloudaloe.github.io/hadas/).
