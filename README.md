@@ -18,10 +18,10 @@ Code change to your project:     1 (for your application's browser side code, if
 
 ## Setup
 
-1. Download this repo, extract and locate to it
+1. Git clone or download and extract this repo
 2. [Configure](https://github.com/cloudaloe/hadas/wiki/config.json) `config/config.json` to monitor your project 
 3. Make sure you have [node.js] (http://nodejs.org/) installed
-4. Install the prerequisite node modules by running: `install.bat`
+4. Install the prerequisite node modules by running: `npm install optimist nconf node-static socket.io` 
 5. In your project's client-side code directory, <br/> 
    copy the following files into a subdirectory named /lib:
    `hadasClientListener.js`
