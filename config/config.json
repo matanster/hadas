@@ -1,16 +1,17 @@
 {
-	"projectRoot": "C:\\Github\\hadas\\test\\project",
+	"projectRoot": "/home/matan/ingi/repos/ezreed",
 	"run": {
-		"target": "node",
-		"targetArgs": "server.js"
+		"target": "sails",
+		"targetArgs": "lift --verbose"
 	},
 	"doNotWatchDirs": [
 		".git",
-		"node_modules"
+		"node_modules",
+		".tmp"
 	],
 	"server": {
 		"hostname": "localhost",
-		"port": 1337
+		"port": 1338
   }
 }
 

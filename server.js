@@ -265,6 +265,8 @@ function changeDetected(event, filename)
 	
 function watch(directory)
 {
+// TODO: an as an option, reverting back to the use of fs.watchFile(directory, {persistent: true, interval: 1000}, changeDetected); 
+// so that remote filesystems can work. fs.watch only works on the local file system, not helpful for virtualboxes, or network drives.
 			var fullPath = directory;
 			
 			var _type = fs.statSync(directory);
@@ -278,14 +280,15 @@ function watch(directory)
 				{
 					// on a VirtualBox shared drive, fs.watch doesn't work because
 					// VirtualBox doesn't propogate inotify event
-							// (https://www.virtualbox.org/ticket/10660)
-					fs.watchFile(directory, {persistent: true, interval: 1000}, changeDetected);
+					// (https://www.virtualbox.org/ticket/10660)
+					fs.watch(directory, changeDetected);
 					if (argv.test) 
 						fs.writeSync(tests.watch, 'watching directory: ' + directory + '\n');																
-						containedEntities = fs.readdirSync(directory)
-						containedEntities.forEach(function(element, index, array) {
-							array[index] = path.join(directory, array[index]);
-						});					
+					containedEntities = fs.readdirSync(directory)
+					containedEntities.forEach(function(element, index, array) {
+						array[index] = path.join(directory, array[index]);
+ 						//console.log("watching:" + array[index]);
+					});					
 					
 					//
 					// as long as relying on fs.watch for watching changes:
@@ -302,6 +305,7 @@ function watch(directory)
 			}
 			else if (_type.isFile())
 			{
+				fs.watch(directory, changeDetected);
 				/*if (fullPath.substr(-3) == '.js')
 				{
 					var sourceFile = new Object();
