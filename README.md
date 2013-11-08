@@ -52,7 +52,7 @@ Post your ideas in the Wiki or fork / take away pieces.
 ## Inspiration and acknowledgements
 
 This was inspired by a general disenchantment with IDE-centric workflows and an unmet need for quick feedback. <br/>
-I found no existing project doing this, so I made it. Lightly inspired by [Light Table] (http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/). <br/> The code was partly inspired by [Andrew Davey's vogue code] (https://github.com/andrewdavey/vogue). 
+I found no existing project doing this, so I made it. Later https://github.com/remy/nodemon came around, but it's only server side for now. Lightly inspired by [Light Table] (http://www.chris-granger.com/2012/04/12/light-table---a-new-ide-concept/). <br/> The code was partly inspired by [Andrew Davey's vogue code] (https://github.com/andrewdavey/vogue). 
 
 Under the hood:
 * Node.js
