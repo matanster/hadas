@@ -98,7 +98,7 @@ io.sockets.on('connection', function (socket) {
 		
 		// TODO: Probably these next two are a bug and should move to within spawnPlus
 		console.log('recycling the client side');	
-		io.sockets.emit('clientRecycle', true);
+		//io.sockets.emit('clientRecycle', true);
 	});
 	
 	socket.on('pause', function (clientObject) {
@@ -154,7 +154,13 @@ function spawnPlus()
 		console.log('starting the application side...');
 			
 		runner = spawn(run.target, argsArray, { cwd: projectRoot});
-		runner.stdout.on('data', function (data) { io.sockets.emit('agentStdout', String(data)) });	
+		runner.stdout.on('data', function (data) { 
+				// TODO: move string to match into configuration
+				io.sockets.emit('agentStdout', String(data)) 
+				console.log(String(data).indexOf("Express server listening on port"));
+				if (String(data).indexOf("Express server listening on port") == 0)
+					io.sockets.emit('clientRecycle', true);
+			});	
 		runner.stderr.on('data', function (data) { io.sockets.emit('agentStderr', String(data)) });	
 		io.sockets.emit('agentStatus', true);
 		io.sockets.emit('agentStarted');	
@@ -255,7 +261,7 @@ function changeDetected(event, filename)
 		if (watchActive.clientSide)
 		{
 			console.log('recycling the client side');	
-			io.sockets.emit('clientRecycle', true);
+			//io.sockets.emit('clientRecycle', true);
 		}
 		else 
 			console.log('watch paused for client side - no action taken');		

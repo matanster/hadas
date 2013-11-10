@@ -1,8 +1,8 @@
 {
 	"projectRoot": "/home/matan/ingi/repos/ezreed",
 	"run": {
-		"target": "coffee",
-		"targetArgs": "app.coffee"
+		"target": "sails",
+		"targetArgs": "lift --verbose"
 	},
 	"doNotWatchDirs": [
 		".git",
